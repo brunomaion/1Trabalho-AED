@@ -4,7 +4,7 @@ dp <- 10
 
 # Gerar amostras aleatórias
 set.seed(123)  # para reprodutibilidade
-valores <- rnorm(20, mean = media, sd = dp)
+valores <- rnorm(10, mean = media, sd = dp)
 
 # Calcular densidade da curva para o eixo x
 x <- seq(130, 220, by = 1)
@@ -25,6 +25,7 @@ axis(1, at = seq(130, 220, by = 10))
 points(valores, dnorm(valores, mean = media, sd = dp),
        col = "blue", pch = 19)
 
+
 # Linha na média
 abline(v = media, col = "red", lty = 2, lwd = 2)
 
@@ -35,7 +36,8 @@ legend("topright", legend = c(
 ), col = c("blue", "red"), pch = c(19, NA), lty = c(NA, 2), lwd = c(NA, 2), bty = "n")
 
 # Exibir os valores gerados
-cat("Valores gerados com rnorm():\n", round(valores, 2), "\n")
+# cat("Valores gerados com rnorm():\n", round(valores, 2), "\n")
+cat("Teste media", mean(valores))
 
 # Fechar dispositivo gráfico
 dev.off()
