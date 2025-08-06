@@ -10,8 +10,7 @@ png("T3/dnorm.png", width = 1200, height = 700, res = 150)
 # Plotar a primeira curva
 plot(x, y1, type = "l", col = "blue", lwd = 2,
      ylim = c(0, max(y1, y2, y3)),
-     xlab = "Altura", ylab = "Densidade",
-     main = "dnorm()")
+     xlab = "Altura", ylab = "Densidade")
 
 axis(1, at = seq(130, 220, by = 10))
 # Adicionar as outras curvas
